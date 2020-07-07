@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Fondamento&family=Galada&family=Lora&family=Modak&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.time{
+    background: url('./carRain.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    /* justify-content: flex-end; */
+    /* align-items: flex-end; */
+    opacity: 0.88;
+}
+
+.time .container {
+    position: absolute;
+    width: 800px;
+    left: 50%;
+    justify-content: flex-start;
+}
+
+.container .goal{
+    margin: 20px 120px;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+}
+.container .goal h3{
+    padding-bottom: 12px;
+    font-size: 20px;
+    font-family: 'Fondamento', cursive;
+    letter-spacing: 1px;
+    opacity: 15;
+    color: rgb(163, 241, 7);
+
+    /* color: white; */
+    /* color: rgb(160, 0, 0); */
+}
+.container .goal p span{
+    color: rgb(149, 212, 23);
+    /* color: rgb(160, 0, 0); */
+}
+.container .goal p{
+    font-size: 17px;
+    opacity: 10;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-family: 'Lora', serif;
+}
+
+.clock{
+    position: relative;
+    top: 5%;
+    left: 10%;
+    /* right: ; */
+    width: 350px;
+    height: 350px;
+    /* background: url('./clockBG.jpg'); */
+    background-size: cover;
+    /* background-color: rgb(118, 135, 165); */
+    border-radius: 50%;
+    /* box-shadow: 5px 5px 5px  black; */
+    border: 3px solid white;
+    overflow: hidden;
+}
+.clock .thought p{
+    font-family: 'Galada', cursive;
+}
+.clock .thought {
+    position: absolute;
+    width: 100px;
+    top: 17%;
+    font-size: 28px;
+    left: 24%;
+    color: white;
+    opacity: 10px;
+}
+
+.clock .number {
+    --rotation : 0deg;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-family: 'Galada', cursive;
+    font-size: 30px;
+    color: white;
+    opacity: 8;
+    /* color: rgb(75, 48, 48); */
+}
+.clock .number1{--rotation : 30deg}
+.clock .number2{--rotation : 60deg}
+.clock .number3{--rotation : 90deg}
+.clock .number4{--rotation : 120deg}
+.clock .number5{--rotation : 150deg}
+.clock .number6{--rotation : 180deg}
+.clock .number7{--rotation : 210deg}
+.clock .number8{--rotation : 240deg}
+.clock .number9{--rotation : 270deg}
+.clock .number10{--rotation : 300deg}
+.clock .number11{--rotation : 330deg}
+
+.clock::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 18px;
+    height: 18px;
+    opacity: 18;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.clock .hand {
+    --rotation : 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+    border: 1px solid white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 10px;
+    height: 45%;
+    opacity: 15;
+    background-color: black;
+}
+
+.clock .hand.second {
+    width: 4px;
+    height: 45%;
+    background-color: rgb(214, 209, 209);
+}
+.clock .hand.minute {
+    width: 7px;
+    --rotation : 30;
+    height: 35%;
+    background-color: rgb(5, 58, 5);
+}
+.clock .hand.hour {
+    --rotation : 6;
+    width: 10px;
+    height: 25%;
+    background-color: rgba(43, 1, 1, 0.699);
+}
